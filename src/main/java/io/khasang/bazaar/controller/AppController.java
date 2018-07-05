@@ -31,4 +31,10 @@ public class AppController {
         //hello.jsp
         return "table";
     }
+
+    @RequestMapping("/admin")
+    public String getAdminInfo(Model model) {
+        model.addAttribute("secure", "It's very sequre page!");
+        return "admin";
+    }
 }
